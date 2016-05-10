@@ -1,10 +1,10 @@
 # 各組分別在各自的 .py 程式中建立應用程式 (第1步/總共3步)
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, make_response
 
 # 利用 Blueprint建立 ag1, 並且 url 前綴為 /ag1, 並設定 template 存放目錄
 bg10 = Blueprint('bg10', __name__, url_prefix='/bg10', template_folder='templates')
 
-    
+
 
 # 展示傳回 Brython 程式
 @bg10.route('/task2')
@@ -55,44 +55,28 @@ cgo.drawAxes(0, 240, 0, 240, {
     "yTickInterval": 20,
     "yLabelInterval": 20})
         
-#cgo.drawText("使用 Cango 繪圖程式庫!", 0, 0, {"fontSize":60, "fontWeight": 1200, "lorg":5 })
-deg = math.pi/180  
-def O(x, y, rx, ry, rot, color, border, linewidth):
-    # 旋轉必須要針對相對中心 rot not working yet
-    chamber = "M -6.8397, -1.4894 \
-                     A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
-                     A 40, 40, 0, 0, 1, 6.8397, -18.511 \
-                     A 7, 7, 0, 1, 0, -6.8397, -18.511 \
-                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
-    cgoChamber = window.svgToCgoSVG(chamber)
-    cmbr = cobj(cgoChamber, "SHAPE", {
-            "fillColor": color,
-            "border": border,
-            "strokeColor": "tan",
-            "lineWidth": linewidth })
-  
 
-    cmbr.translate(0, 0)
-   
-    
-    
-    # hole 為原點位置
-    #hole = cobj(shapedefs.circle(4), "PATH") 
-    #cmbr.appendPath(hole) 
-
-    # 放大 1 倍
-    cgo.render(cmbr, x, y, 1, rot)
-    
-O(0, 0, 0, 0, 0, "lightyellow", True, 4)
 </script>
 
 
 
-</body>
-</html>
+
+
 '''
     return outstring
-    
 
-    
 
+
+@bg10.route('/task2_tail')
+def task2_tail():
+    return "</body></html>"
+    
+   
+
+@bg10.route('/task2_homework')
+def task2_homework():
+    outstring = task2()
+    outstring += "<script type='text/python' src='http://2016spring-40328242.rhcloud.com/bg10/scrum1_40328242_1'></script>"
+   
+    outstring += task2_tail()
+    return outstring

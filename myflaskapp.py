@@ -63,13 +63,12 @@ import users.s2b.g3.scrum3_task40123242
 import users.s2b.g3.scrum3_task40123250
 #g4
 #import users.s2b.g4.taskbg4
-#import users.s2b.g5.scrum1_task40323201
-#import users.s2b.g5.scrum2_task40323202
-#import users.s2b.g5.scrum3_task40323203
-#import users.s2b.g5.scrum4_task40323205
-#import users.s2b.g5.scrum5_task40323208
-#import users.s2b.g5.scrum6_task40123128
-#以上幾行有錯誤
+#import users.s2b.g4.scrum1_task40323201
+#import users.s2b.g4.scrum2_task40323202
+#import users.s2b.g4.scrum3_task40323203
+#import users.s2b.g4.scrum4_task40323205
+#import users.s2b.g4.scrum5_task40323208
+#import users.s2b.g4.scrum6_task40123128
 #g5
 import users.s2b.g5.task0
 import users.s2b.g5.scrum1_task40323204
@@ -470,6 +469,7 @@ app.register_blueprint(users.s2b.g5.scrum5_task40323253.scrum5_task40323253)
 app.register_blueprint(users.s2b.g5.scrum6_task40323255.scrum6_task40323255)
 #g6
 app.register_blueprint(users.s2b.g6.scrum1_task40323210.scrum1_task40323210)
+app.register_blueprint(users.s2b.g6.task0.bg6)
 #g7
 app.register_blueprint(users.s2b.g7.scrum1_task40323212.scrum1_task40323212)
 app.register_blueprint(users.s2b.g7.scrum2_task40323216.scrum2_task40323216)
