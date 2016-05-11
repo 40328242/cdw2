@@ -77,6 +77,8 @@ def task2_tail():
 def task2_homework():
     outstring = task2()
     outstring += "<script type='text/python' src='http://2016spring-40328242.rhcloud.com/bg10/scrum1_40328242_1'></script>"
-   
+    outstring += "<script type='text/python' src='http://40328245-cdw2.rhcloud.com/bg10/scrum2_40328245_1'></script>"
+    outstring += "<script type='text/python' src='http://2016spring-lin0929222272.rhcloud.com/bg10/scrum3_40323222_1'></script>"
+    outstring += "<script type='text/python' src='http://2016spring-2014cpfall.rhcloud.com/bg10/scrum4_40323243_1'></script>"
     outstring += task2_tail()
     return outstring
